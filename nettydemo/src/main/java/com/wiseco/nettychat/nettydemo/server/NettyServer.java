@@ -1,6 +1,6 @@
 package com.wiseco.nettychat.nettydemo.server;
 
-import com.wiseco.nettychat.nettydemo.handler.FirstServerhandler;
+import com.wiseco.nettychat.nettydemo.handler.ServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -23,7 +23,8 @@ public class NettyServer {
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new FirstServerhandler());
+                        //ch.pipeline().addLast(new FirstServerHandler());
+                        ch.pipeline().addLast(new ServerHandler());
 
                     }
                 });

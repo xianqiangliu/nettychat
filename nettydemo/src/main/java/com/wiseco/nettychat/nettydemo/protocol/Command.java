@@ -6,4 +6,5 @@ package com.wiseco.nettychat.nettydemo.protocol;
  */
 public interface Command {
     Byte LOGIN_REQUEST=1;
+    Byte LOGIN_RESPONSE=1;
 }

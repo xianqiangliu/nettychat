@@ -1,5 +1,6 @@
 package com.wiseco.nettychat.nettydemo.client;
 
+import com.wiseco.nettychat.nettydemo.handler.ClientHandler;
 import com.wiseco.nettychat.nettydemo.handler.FirstClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelInitializer;
@@ -27,7 +28,8 @@ public class NettyClient {
                 .handler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new FirstClientHandler());
+                       // ch.pipeline().addLast(new FirstClientHandler());
+                        ch.pipeline().addLast(new ClientHandler());
 
                     }
                 });
