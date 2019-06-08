@@ -1,6 +1,9 @@
 package com.wiseco.nettychat.nettydemo.handler;
 
-import com.wiseco.nettychat.nettydemo.protocol.LoginRequestPacket;
+import com.wiseco.nettychat.nettydemo.packet.LoginRequestPacket;
+import com.wiseco.nettychat.nettydemo.packet.LoginResponsePacket;
+import com.wiseco.nettychat.nettydemo.packet.MessageRequestPacket;
+import com.wiseco.nettychat.nettydemo.packet.MessageResponsePacket;
 import com.wiseco.nettychat.nettydemo.protocol.Packet;
 import com.wiseco.nettychat.nettydemo.protocol.PacketCodeC;
 import io.netty.buffer.ByteBuf;
@@ -18,26 +21,40 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx,Object msg){
         ByteBuf requestBuffer = (ByteBuf) msg;
-        System.out.println(new Date()+": 客户端开始登录。。。");
 
         Packet packet = PacketCodeC.INSTANCE.decode(requestBuffer);
-        if(packet instanceof LoginRequestPacket){
-           // LoginRequestPacket loginRequestPacket = (LoginRequestPacket) packet;
-            LoginRequestPacket loginRequestPacket = new LoginRequestPacket();
-            loginRequestPacket.setVersion(packet.getVersion());
-            if(valid(loginRequestPacket)){
-                System.out.println("登录成功！");
-                loginRequestPacket.setSuccess(true);
-            }else{
-                loginRequestPacket.setReason("账号密码校验失败！");
-                loginRequestPacket.setSuccess(false);
-            }
 
-            ByteBuf responseByteBuf = PacketCodeC.INSTANCE.encode(ctx.alloc(),loginRequestPacket);
+        //System.out.println(packet);
+
+        // 判断是否是登录请求数据包
+        if (packet instanceof LoginRequestPacket) {
+            System.out.println(new Date() + ": 收到客户端登录请求……");
+            // 登录流程
+            LoginRequestPacket loginRequestPacket = (LoginRequestPacket) packet;
+
+            LoginResponsePacket loginResponsePacket = new LoginResponsePacket();
+            loginResponsePacket.setVersion(packet.getVersion());
+            if (valid(loginRequestPacket)) {
+                loginResponsePacket.setSuccess(true);
+                System.out.println(new Date() + ": 登录成功!");
+            } else {
+                loginResponsePacket.setReason("账号密码校验失败");
+                loginResponsePacket.setSuccess(false);
+                System.out.println(new Date() + ": 登录失败!");
+            }
+            // 登录响应
+            ByteBuf responseByteBuf = PacketCodeC.INSTANCE.encode(ctx.alloc(), loginResponsePacket);
+            ctx.channel().writeAndFlush(responseByteBuf);
+        }else if (packet instanceof MessageRequestPacket) {
+            // 客户端发来消息
+            MessageRequestPacket messageRequestPacket = ((MessageRequestPacket) packet);
+
+            MessageResponsePacket messageResponsePacket = new MessageResponsePacket();
+            System.out.println(new Date() + ": 收到客户端消息: " + messageRequestPacket.getMessage());
+            messageResponsePacket.setMessage("服务端回复【" + messageRequestPacket.getMessage() + "】");
+            ByteBuf responseByteBuf = PacketCodeC.INSTANCE.encode(ctx.alloc(), messageResponsePacket);
             ctx.channel().writeAndFlush(responseByteBuf);
         }
-
-
     }
 
     private boolean valid(LoginRequestPacket loginRequestPacket){

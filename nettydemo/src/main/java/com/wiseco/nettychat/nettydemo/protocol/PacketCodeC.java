@@ -1,5 +1,9 @@
 package com.wiseco.nettychat.nettydemo.protocol;
 
+import com.wiseco.nettychat.nettydemo.packet.LoginRequestPacket;
+import com.wiseco.nettychat.nettydemo.packet.LoginResponsePacket;
+import com.wiseco.nettychat.nettydemo.packet.MessageRequestPacket;
+import com.wiseco.nettychat.nettydemo.packet.MessageResponsePacket;
 import com.wiseco.nettychat.nettydemo.protocol.serialize.Serializer;
 import com.wiseco.nettychat.nettydemo.protocol.serialize.impl.JSONSerializer;
 import io.netty.buffer.ByteBuf;
@@ -8,45 +12,29 @@ import io.netty.buffer.ByteBufAllocator;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.wiseco.nettychat.nettydemo.protocol.Command.LOGIN_REQUEST;
-import static com.wiseco.nettychat.nettydemo.protocol.Command.LOGIN_RESPONSE;
+import static com.wiseco.nettychat.nettydemo.protocol.Command.*;
 
-/**
- * @author xianqiangliu
- * @date 2019/6/7 17:56
- */
 public class PacketCodeC {
-    private static final int MAGIC_NUMBER=0x12345678;
-    private static final Map<Byte,Class<? extends Packet>> packetTypeMap;
-    private static final Map<Byte, Serializer>serializerMap;
 
+    private static final int MAGIC_NUMBER = 0x12345678;
     public static final PacketCodeC INSTANCE = new PacketCodeC();
 
-    static {
+    private final Map<Byte, Class<? extends Packet>> packetTypeMap;
+    private final Map<Byte, Serializer> serializerMap;
+
+
+    private PacketCodeC() {
         packetTypeMap = new HashMap<>();
-        packetTypeMap.put(LOGIN_REQUEST,LoginRequestPacket.class);
-        packetTypeMap.put(LOGIN_RESPONSE,LoginRequestPacket.class);
+        packetTypeMap.put(LOGIN_REQUEST, LoginRequestPacket.class);
+        packetTypeMap.put(LOGIN_RESPONSE, LoginResponsePacket.class);
+        packetTypeMap.put(MESSAGE_REQUEST, MessageRequestPacket.class);
+        packetTypeMap.put(MESSAGE_RESPONSE, MessageResponsePacket.class);
 
         serializerMap = new HashMap<>();
-        JSONSerializer serializer = new JSONSerializer();
-        serializerMap.put(serializer.getSerializerAlgorithm(),serializer);
+        Serializer serializer = new JSONSerializer();
+        serializerMap.put(serializer.getSerializerAlgorithm(), serializer);
     }
 
-
-    public ByteBuf encode(Packet packet){
-        ByteBuf byteBuf = ByteBufAllocator.DEFAULT.ioBuffer();
-        byte[] bytes = Serializer.DEFAULT.serialize(packet);
-
-        //编码过程
-        byteBuf.writeInt(MAGIC_NUMBER);
-        byteBuf.writeByte(packet.getVersion());
-        byteBuf.writeByte(Serializer.DEFAULT.getSerializerAlgorithm());
-        byteBuf.writeByte(packet.getCommand());
-        byteBuf.writeInt(bytes.length);
-        byteBuf.writeBytes(bytes);
-
-        return byteBuf;
-    }
 
     public ByteBuf encode(ByteBufAllocator byteBufAllocator, Packet packet) {
         // 1. 创建 ByteBuf 对象
@@ -66,33 +54,42 @@ public class PacketCodeC {
     }
 
 
-    public Packet decode(ByteBuf byteBuf){
+    public Packet decode(ByteBuf byteBuf) {
+        // 跳过 magic number
         byteBuf.skipBytes(4);
 
+        // 跳过版本号
         byteBuf.skipBytes(1);
 
-        byte serializerAlgorithm = byteBuf.readByte();
+        // 序列化算法
+        byte serializeAlgorithm = byteBuf.readByte();
 
+        // 指令
         byte command = byteBuf.readByte();
 
+        // 数据包长度
         int length = byteBuf.readInt();
 
         byte[] bytes = new byte[length];
         byteBuf.readBytes(bytes);
 
         Class<? extends Packet> requestType = getRequestType(command);
-        Serializer serializer = getSerializer(serializerAlgorithm);
-        if(requestType != null && serializer != null){
-            return serializer.deserilize(requestType,bytes);
+        Serializer serializer = getSerializer(serializeAlgorithm);
+
+        if (requestType != null && serializer != null) {
+            return serializer.deserialize(requestType, bytes);
         }
+
         return null;
     }
 
-    private Serializer getSerializer(byte serializeAlgorithm){
+    private Serializer getSerializer(byte serializeAlgorithm) {
+
         return serializerMap.get(serializeAlgorithm);
     }
 
-    private Class<? extends Packet> getRequestType(byte command){
+    private Class<? extends Packet> getRequestType(byte command) {
+
         return packetTypeMap.get(command);
     }
 }

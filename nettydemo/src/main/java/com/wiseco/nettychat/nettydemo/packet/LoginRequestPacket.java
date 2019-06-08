@@ -1,5 +1,6 @@
-package com.wiseco.nettychat.nettydemo.protocol;
+package com.wiseco.nettychat.nettydemo.packet;
 
+import com.wiseco.nettychat.nettydemo.protocol.Packet;
 import lombok.Data;
 
 import static com.wiseco.nettychat.nettydemo.protocol.Command.LOGIN_REQUEST;
