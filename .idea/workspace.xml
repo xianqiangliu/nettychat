@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="328dc2ca-9e94-44e7-ad9a-bfb73ef944ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_6_Final.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/client/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/client/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/LoginRequestPacket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/PacketCodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/PacketCodeC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nettydemo/src/test/java/com/wiseco/nettychat/nettydemo/PacketCodeCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettydemo/src/test/java/com/wiseco/nettychat/nettydemo/PacketCodeCTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettydemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nettydemo/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-107">
+            <state relative-caret-position="999">
               <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -32,16 +27,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+            <state relative-caret-position="136">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2592#2593#0" expanded="true" />
-                <element signature="e#2619#2620#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nettydemo/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -49,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/PacketCodeC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+            <state relative-caret-position="756">
+              <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/serialize/Serializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-404">
+            <state relative-caret-position="216">
               <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
@@ -70,12 +72,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/client/NettyClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="1620">
               <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1507#1750#0" expanded="true" />
-                <element signature="e#1749#1750#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,12 +84,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/server/NettyServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="567">
               <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#833#1178#0" expanded="true" />
-                <element signature="e#1177#1178#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,6 +110,12 @@
         <entry key="$PROJECT_DIR$" value="clientlogin" />
       </map>
     </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -125,7 +129,6 @@
         <option value="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/FirstServerhandler.java" />
         <option value="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/FirstClientHandler.java" />
         <option value="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/bytebuf/ByteBufTest.java" />
-        <option value="$PROJECT_DIR$/nettydemo/pom.xml" />
         <option value="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/SerilizerAlgorithm.java" />
         <option value="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/JSONSerializer.java" />
         <option value="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/Serializer.java" />
@@ -145,6 +148,7 @@
         <option value="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/client/NettyClient.java" />
         <option value="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ClientHandler.java" />
         <option value="$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ServerHandler.java" />
+        <option value="$PROJECT_DIR$/nettydemo/pom.xml" />
       </list>
     </option>
   </component>
@@ -164,16 +168,19 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
-    <option name="width" value="1935" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2142" />
+    <option name="y" value="114" />
+    <option name="width" value="1012" />
+    <option name="height" value="759" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -280,14 +287,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559965922900" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575336051456" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -405,12 +410,15 @@
       <updated>1559874489321</updated>
       <workItem from="1559874491196" duration="21734000" />
       <workItem from="1559908527723" duration="11407000" />
-      <workItem from="1559955921679" duration="9487000" />
+      <workItem from="1559955921679" duration="10405000" />
+      <workItem from="1560129390247" duration="599000" />
+      <workItem from="1560212331849" duration="193000" />
+      <workItem from="1575335678054" duration="318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42628000" />
+    <option name="totallyTimeSpent" value="44656000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,9 +430,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1290" height="688" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49811321" weight="0.2796748" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.29295623" />
       <window_info id="Structure" order="1" sideWeight="0.5018868" side_tool="true" weight="0.28292683" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -433,13 +441,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44528303" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44528303" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.36037737" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32830188" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32830188" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3277559" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32830188" />
@@ -533,13 +541,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nettydemo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -732,13 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/serialize/Serializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-404">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/serialize/SerializerAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -786,21 +780,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/client/NettyClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1507#1750#0" expanded="true" />
-            <element signature="e#1749#1750#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
+        <state relative-caret-position="999">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -810,8 +792,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/PacketCodeC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+        <state relative-caret-position="756">
+          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/protocol/serialize/Serializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/client/NettyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -820,25 +819,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/server/NettyServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="567">
           <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#833#1178#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nettydemo/src/main/java/com/wiseco/nettychat/nettydemo/handler/ServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+        <state relative-caret-position="136">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2592#2593#0" expanded="true" />
-            <element signature="e#2619#2620#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nettydemo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
         </state>
       </provider>
     </entry>
